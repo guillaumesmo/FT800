@@ -46,4 +46,5 @@ This repo is open for pull requests, please contribute to this project! You can 
 - Add examples
 - Add support for other MCU's
 - Add support for other displays
+- Additional support for touch and sound
 - Allow conversion of cmd_* macro's to functions with a define
