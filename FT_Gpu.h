@@ -293,8 +293,6 @@
 #define FT_GPU_NUMCHAR_PERFONT (128)
 #define FT_GPU_FONT_TABLE_SIZE (148)
 
-
-
 /* FT800 font table structure */
 /* Font table address in ROM can be found by reading the address from 0xFFFFC location. */
 /* 16 font tables are present at the address read from location 0xFFFFC */

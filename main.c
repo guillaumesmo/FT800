@@ -89,49 +89,26 @@ void main(void) {
 
     while(1);*/
 
-    ///*
     // LOGO test
     cmd(CMD_LOGO);
     cmd_exec();
     while(rd16(REG_CMD_WRITE) != 0){}
     cmd_wait();
-    //while( (0 != rd16(REG_CMD_WRITE)) && (rd16(REG_CMD_WRITE) != rd16(REG_CMD_READ) ));//Wait till both read & write pointer register are equal to zero
-    //*/
 
     cmd(CMD_DLSTART);
     cmd(CLEAR_COLOR_RGB(255,0,0));
     cmd(CLEAR(1,1,1));
     cmd_text(240, 136, 27, OPT_CENTER, "Please tap the dots to calibrate the display");
-    //cmd(DISPLAY()); // display the image
-    //cmd(CMD_SWAP);
     cmd_calibrate();
     cmd_exec();
     cmd_wait();
-
-    ///*
-    // example Display List
+    
     cmd(CMD_DLSTART);
     cmd(CLEAR(1, 1, 1)); // clear screen
-    /*cmd(BEGIN(BITMAPS)); // start drawing bitmaps
-    cmd(VERTEX2II(190, 110, 31, 'M')); // ascii I
-    cmd(VERTEX2II(220, 110, 31, 'A')); // ascii F in font 31
-    cmd(VERTEX2II(244, 110, 31, 'M')); // ascii T
-    cmd(VERTEX2II(270, 110, 31, 'A')); // ascii D
-    cmd(VERTEX2II(299, 110, 31, 'N')); // ascii I
-    cmd(END());*/
-    /*
-    cmd(COLOR_RGB(160, 22, 22)); // change color to red
-    cmd(POINT_SIZE(320)); // set point size to 20 pixels in radius
-    cmd(BEGIN(POINTS)); // start drawing points
-    cmd(VERTEX2II(192, 133, 0, 0)); // red point
-    cmd(END());*/
-
     cmd_button(10, 10, 140, 100, 31, 0, "Press!");
-
     cmd(DISPLAY()); // display the image
     cmd(CMD_SWAP);
     cmd_exec();
-    //*/
 
     wait3secs();
 
