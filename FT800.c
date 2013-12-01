@@ -51,12 +51,10 @@ ft_uint8_t wr8s(unsigned short long addr, const ft_char8_t *s)
     ft_uint8_t l = strlen(s);
     ft_uint8_t i;
     for(i=0;i<=l;i++){
-        SSPBUF = s[i];
-        while(!SSPSTATbits.BF);
+        tr8(s[i]);
     }
     for(;i%4>0;i++){
-        SSPBUF = 0;
-        while(!SSPSTATbits.BF);
+        tr8(0);
     }
     FT800_StopTransmission();
     return i;
