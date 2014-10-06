@@ -3,8 +3,6 @@ FT800 C Library
 
 C Library for the FTDI FT800 GPU
 
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=29U7QJZ99LJ46)
-
 ### Goals of the library
 
 - Works with 8-bit MCU's (as advertized by FTDI)
@@ -34,7 +32,7 @@ C Library for the FTDI FT800 GPU
 
 ### Further development
 
-This repo is open for pull requests, please contribute to this project! You can also donate to pay the coffee and boost development ;)
+This repo is open for pull requests, please contribute to this project!
 
 #### Roadmap
 
